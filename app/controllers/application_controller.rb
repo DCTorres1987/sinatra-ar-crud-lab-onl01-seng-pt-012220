@@ -29,6 +29,8 @@ class ApplicationController < Sinatra::Base
     end
   
   get '/articles/:id' do 
+    Article.find_by(params["id"])
+    
   binding.pry
   end
   
