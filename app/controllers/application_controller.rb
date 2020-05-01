@@ -30,11 +30,11 @@ class ApplicationController < Sinatra::Base
   
   get '/articles/:id' do 
     @article = Article.find_by(id: params["id"])
-    binding.pry
     erb :show
   end
   
   get '/articles/:id/edit' do 
+    @article = Article.find_by(id: params["id"])
     erb :edit
   end
   
